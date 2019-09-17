@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 108px;
+    top: 0;
+}
+
+body{
+    background-color: black;
+    min-height: calc(100vh - 108px);
+}
+
+.main-and-footer {
+    margin-top: 108px;
+    display:grid;
+    grid-template-rows: 1fr auto;
+    min-height: calc(100vh - 108px);
+}
+
+main {
+    margin-left:22px;
+    padding:12px;
+}
+
+#tittel1{
+    color:white;
+    font-size: 25px;
+    margin-top:20px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 'Frank Ruhl Libre', serif;
+    letter-spacing: 1px;
+}
+
+.slide-nav{
+    width:600px;
+    margin:30px auto;
+    display:grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-gap:3px;
+}
+
+.slide-nav a{
+    text-decoration: none;
+    font-family: 'Frank Ruhl Libre', serif;
+    width:160px;
+    color:white;
+    text-align:center;
+    cursor: pointer;
+}
+
+.slide-nav a:hover{
+    color:rgb(92,150,29);
+}
+
+.scroll-container{
+    width:800px;
+    margin:auto;
+    overflow:auto;
+    scroll-behavior:smooth;
+    scroll-snap-type:x mandatory;
+    display: grid;
+}
+
+.scroll-container .top img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.scroll-container #p-1 .bottom{
+    margin-top:15px;
+}
+
+.scroll-container .bottom h1, .scroll-container .bottom h2, .scroll-container .bottom p{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-container .bottom h1{
+    color:white;
+    font-size:26px;
+}
+
+.bottom p{
+    line-height: 22px;
+}
+
+.scroll-container #p-2 .bottom, .scroll-container #p-3 .bottom,
+.scroll-container #p-4 .bottom, .scroll-container #p-5 .bottom, 
+.scroll-container #p-6 .bottom{
+    margin-top:60px;
+}
+
+.scroll-container #p-7 .bottom{
+    margin-top:30px;
+}
+.scroll-container .slides{
+    width:600%;
+    background-color: rgb(92,150,29);
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-auto-rows: 570px;
+}
+
+.slides article{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    display:grid;
+    grid-template-rows: 400px auto;
+}
